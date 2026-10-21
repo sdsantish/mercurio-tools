@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Formatos C.E.</title>
+  <style>
+    body { font-family: system-ui, sans-serif; width: 380px; margin: 12px; font-size: 14px; }
+    label { font-size: 12px; color: #555; display: block; margin: 8px 0 4px; }
+    input, textarea { width: 100%; box-sizing: border-box; padding: 6px 8px; font-size: 14px; }
+    textarea { font-family: monospace; background: #f3f3f3; resize: none; }
+
+    .combo { position: relative; }
+    #lista { list-style: none; margin: 0; padding: 0; border: 1px solid #ccc; border-top: none;
+             max-height: 260px; overflow-y: auto; }
+    #lista li { padding: 6px 8px; cursor: pointer; display: flex; gap: 8px; }
+    #lista li .codigo { font-weight: bold; min-width: 30px; }
+    #lista li .doc { color: #666; font-size: 12px; margin-left: auto; text-align: right; }
+    #lista li.activo { background: #dbeafe; }
+    #lista li.vacio { color: #888; cursor: default; }
+
+    .campo { display: flex; align-items: center; gap: 8px; margin-top: 6px; }
+    .campo span { min-width: 120px; max-width: 160px; font-size: 12px; font-weight: bold; }
+    button { margin-top: 10px; width: 100%; padding: 8px; font-size: 14px; cursor: pointer; }
+    .oculto { display: none; }
+    .ayuda { font-size: 11px; color: #888; margin-top: 6px; text-align: center; }
+  </style>
+</head>
+<body>
+  <label for="filtro">Categoría</label>
+  <div class="combo">
+    <input id="filtro" type="text" placeholder="Escribe el código o nombre (ej. 40)" autocomplete="off">
+    <ul id="lista"></ul>
+  </div>
+
+  <div id="formulario" class="oculto">
+    <div id="campos"></div>
+
+    <label for="salida">Resultado</label>
+    <textarea id="salida" rows="5" readonly></textarea>
+
+    <button id="copy">Copiar y cerrar (Enter en el último campo)</button>
+  </div>
+
+  <div class="ayuda">↑ ↓ para moverte · Enter para elegir · Ctrl+Enter copia y cierra</div>
+
+  <script src="plantillas.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

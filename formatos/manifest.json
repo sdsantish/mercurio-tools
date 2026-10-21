@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Formatos C.E.",
+  "version": "1.0.0",
+  "description": "Llena el formato de una categoría (401, 402, ...) y copia el texto resultante.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Formatos C.E."
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+S",
+        "mac": "Alt+S"
+      },
+      "description": "Abrir Formatos C.E."
+    }
+  },
+  "permissions": ["clipboardWrite"]
+}
