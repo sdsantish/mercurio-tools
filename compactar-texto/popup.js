@@ -1,5 +1,5 @@
-// Quita espacios (incluye tabs/saltos de línea) y guiones (-, ‐, –, —)
-const compactar = (texto) => texto.replace(/[\s\-‐‑–—]+/g, "");
+// Quita espacios (incluye tabs/saltos de línea), guiones (-, ‐, –, —) y puntos
+const compactar = (texto) => texto.replace(/[\s\-‐‑–—.]+/g, "");
 
 const input = document.getElementById("input");
 const output = document.getElementById("output");

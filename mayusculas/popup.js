@@ -1,4 +1,8 @@
-const mayusculas = (texto) => texto.toUpperCase();
+// Mayúsculas sin tildes (Á -> A, Ü -> U), pero conserva la Ñ
+const mayusculas = (texto) =>
+  texto.toUpperCase().normalize("NFD").replace(/[̀-ͯ]/g, (m, i, s) =>
+    m === "̃" && s[i - 1] === "N" ? m : ""
+  ).normalize("NFC");
 
 const input = document.getElementById("input");
 const output = document.getElementById("output");

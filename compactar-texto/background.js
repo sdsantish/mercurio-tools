@@ -10,7 +10,7 @@ chrome.runtime.onInstalled.addListener(() => {
 chrome.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId !== "compactar" || !tab?.id) return;
 
-  const resultado = info.selectionText.replace(/[\s\-‐‑–—]+/g, "");
+  const resultado = info.selectionText.replace(/[\s\-‐‑–—.]+/g, "");
 
   // El service worker no tiene acceso al portapapeles; se copia desde la página
   chrome.scripting.executeScript({
