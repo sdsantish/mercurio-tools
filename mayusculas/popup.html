@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Mayúsculas</title>
+  <style>
+    body { font-family: system-ui, sans-serif; width: 300px; margin: 12px; }
+    label { font-size: 12px; color: #555; display: block; margin: 8px 0 4px; }
+    input { width: 100%; box-sizing: border-box; padding: 6px 8px; font-size: 14px; font-family: monospace; }
+    #output { background: #f3f3f3; }
+    button { margin-top: 10px; width: 100%; padding: 8px; font-size: 14px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <label for="input">Texto original</label>
+  <input id="input" type="text" placeholder="abc-123" autofocus>
+
+  <label for="output">Resultado</label>
+  <input id="output" type="text" readonly>
+
+  <button id="copy">Copiar y cerrar (Enter)</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

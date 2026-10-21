@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Mayúsculas",
+  "version": "1.0.0",
+  "description": "Convierte texto de minúsculas a mayúsculas (abc-123 -> ABC-123).",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Mayúsculas"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+W",
+        "mac": "Alt+W"
+      },
+      "description": "Abrir Mayúsculas"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["contextMenus", "clipboardWrite", "scripting", "activeTab"]
+}
